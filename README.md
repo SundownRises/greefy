@@ -1,21 +1,18 @@
 <div align="center">
 
-# Crispy
+# Greefy
 
-**Crispy** is a machine learning platform designed to efficiently create video game montages. It utilizes neural networks to detect highlights within video game footage.
+**Greefy** is a machine learning platform designed to efficiently create video game montages. It utilizes neural networks to detect highlights within video game footage.
 
 [![Tech Stack](https://skillicons.dev/icons?i=python,svelte,ts,css,html,docker,bash,mongo,github)](https://skillicons.dev)
 
 </div>
 
-# Demo
 
-- [Live Demo](https://crispy.gyroskan.com/)
-- [YouTube Demo](https://www.youtube.com/watch?v=svT-Z_MkAfw)
 
 # Supported Games
 
-Crispy currently supports the following games:
+Greefy currently supports the following games:
 
 - **[Valorant](https://playvalorant.com/)**
 - **[League of Legends](https://www.leagueoflegends.com/)**
@@ -27,7 +24,7 @@ Crispy currently supports the following games:
 
 ## Installation
 
-Download the latest release for your operating system from the [Releases page](https://github.com/Flowtter/crispy/releases). Releases are available for Windows and Linux.
+Download the latest release for your operating system from the [Releases page](https://github.com/Flowtter/Greefy/releases). Releases are available for Windows and Linux.
 
 ## Setup
 
@@ -48,7 +45,7 @@ Download the latest release for your operating system from the [Releases page](h
 
 ### Python version
 
-Currently, Crispy supports Python 3.8, 3.9, and 3.10.
+Currently, Greefy supports Python 3.8, 3.9, and 3.10.
 
 ## Configuration
 
@@ -187,7 +184,7 @@ After configuration, run the application using the appropriate script:
 
 # Frontend Overview
 
-The frontend is a web application that allows you to interact with the Crispy algorithm and customize your video montages. It consists of five main sections:
+The frontend is a web application that allows you to interact with the Greefy algorithm and customize your video montages. It consists of five main sections:
 
 1. **Clips**
 2. **Segments**
@@ -251,24 +248,24 @@ In the **Result** section, you can:
 INFO:     Started server process [XXXX]
 INFO:     Waiting for application startup.
 INFO:     Adding X highlights, this may take a while.
-WARNING:  Wait for `Application startup complete.` to use Crispy.
+WARNING:  Wait for `Application startup complete.` to use Greefy.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://127.0.0.1:7821 (Press CTRL+C to quit)
 ```
 
-If you don't see the `Application startup complete` message, the backend is still initializing or there is an error. Wait until it completes or check for errors. If issues persist, refer to [existing issues](https://github.com/Flowtter/crispy/issues?q=is%3Aissue+error), or open a new issue if necessary.
+If you don't see the `Application startup complete` message, the backend is still initializing or there is an error. Wait until it completes or check for errors. If issues persist, refer to [existing issues](https://github.com/Flowtter/Greefy/issues?q=is%3Aissue+error), or open a new issue if necessary.
 
 ### Q: How can I change the game ?
 
-**A:** To change the game setting in Crispy, follow these steps:
+**A:** To change the game setting in Greefy, follow these steps:
 
 1. **Stop the application.**
-2. **Delete the `.data` folder and the `session` folder** in the Crispy directory.
+2. **Delete the `.data` folder and the `session` folder** in the Greefy directory.
 3. **Edit `settings.json`** to specify the new game under the `"game"` key.
 4. **Add and remove any necessary files in the resources folder** (e.g., new game dataset).
 5. **Restart the application.**
 
-These steps will reset the game configuration, and the new game will be applied upon starting Crispy.
+These steps will reset the game configuration, and the new game will be applied upon starting Greefy.
 
 #### Q: Why are some games not using the neural network?
 
@@ -276,7 +273,7 @@ These steps will reset the game configuration, and the new game will be applied 
 
 #### Q: Why are some games not supported?
 
-**A:** The neural network requires training specific to each game. If a game is not supported, it means the neural network has not been trained for it yet. You can contribute by training the neural network for the game and submitting a pull request. A tutorial is available [here](https://github.com/Flowtter/crispy/tree/master/crispy-api/dataset).
+**A:** The neural network requires training specific to each game. If a game is not supported, it means the neural network has not been trained for it yet. You can contribute by training the neural network for the game and submitting a pull request. A tutorial is available [here](https://github.com/Flowtter/Greefy/tree/master/Greefy-api/dataset).
 
 #### Q: In CSGO 2, I moved the UI, and the kills are not detected anymore. What can I do?
 
@@ -315,7 +312,7 @@ To get started with development:
 1. **Frontend**
 
    ```sh
-   cd crispy-frontend
+   cd Greefy-frontend
    yarn
    yarn dev
    ```
@@ -323,7 +320,7 @@ To get started with development:
 2. **Backend**
 
    ```sh
-   cd crispy-backend
+   cd Greefy-backend
    pip install -Ir requirements-dev.txt
    python -m api
    ```
@@ -333,6 +330,6 @@ To get started with development:
 To run the test suite:
 
 ```sh
-cd crispy-api
+cd Greefy-api
 pytest
 ```
