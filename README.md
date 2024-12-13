@@ -34,7 +34,7 @@ Greefy currently supports the following games:
    - Unzip the downloaded release.
    - Run the appropriate setup script:
      - For Windows: `setup.bat`
-     - For Linux: `setup.sh`
+    
 
 3. **Add your Videos and Musics**
 
