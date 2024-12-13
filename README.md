@@ -177,7 +177,7 @@ For **League of Legends**, image recognition is used to detect kills. A lower fr
 After configuration, run the application using the appropriate script:
 
 - For Windows: `run.bat`
-- For Linux: `run.sh`
+
 
 # Frontend Overview
 
@@ -250,7 +250,6 @@ INFO:     Application startup complete.
 INFO:     Uvicorn running on http://127.0.0.1:7821 (Press CTRL+C to quit)
 ```
 
-If you don't see the `Application startup complete` message, the backend is still initializing or there is an error. Wait until it completes or check for errors. If issues persist, refer to [existing issues](https://github.com/Flowtter/Greefy/issues?q=is%3Aissue+error), or open a new issue if necessary.
 
 ### Q: How can I change the game ?
 
