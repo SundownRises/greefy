@@ -22,9 +22,6 @@ Greefy currently supports the following games:
 
 # Usage
 
-## Installation
-
-Download the latest release for your operating system from the [Releases page](https://github.com/Flowtter/Greefy/releases). Releases are available for Windows and Linux.
 
 ## Setup
 
