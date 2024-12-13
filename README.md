@@ -235,20 +235,6 @@ In the **Result** section, you can:
 
 - **Preview your montage**: See the final assembled video with all clips, music, and effects applied.
 
-# Q&A
-
-#### Q: I get an Axios error when I load the web page.
-
-**A:** This error likely occurs because the backend is not running. Please ensure that the backend is operational. Look for the following messages in your console:
-
-```bash
-INFO:     Started server process [XXXX]
-INFO:     Waiting for application startup.
-INFO:     Adding X highlights, this may take a while.
-WARNING:  Wait for `Application startup complete.` to use Greefy.
-INFO:     Application startup complete.
-INFO:     Uvicorn running on http://127.0.0.1:7821 (Press CTRL+C to quit)
-```
 
 
 ### Q: How can I change the game ?
@@ -263,69 +249,3 @@ INFO:     Uvicorn running on http://127.0.0.1:7821 (Press CTRL+C to quit)
 
 These steps will reset the game configuration, and the new game will be applied upon starting Greefy.
 
-#### Q: Why are some games not using the neural network?
-
-**A:** The neural network is designed to detect consistent visual cues that signify highlights, such as specific icons or symbols that appear during kills. Some games do not have these consistent indicators. For those games, we use alternative methods like image recognition or Optical Character Recognition (OCR). While these methods can be slower and less accurate, they are the best available options for games without consistent visual cues.
-
-#### Q: Why are some games not supported?
-
-**A:** The neural network requires training specific to each game. If a game is not supported, it means the neural network has not been trained for it yet. You can contribute by training the neural network for the game and submitting a pull request. A tutorial is available [here](https://github.com/Flowtter/Greefy/tree/master/Greefy-api/dataset).
-
-#### Q: In CSGO 2, I moved the UI, and the kills are not detected anymore. What can I do?
-
-**A:** Currently, the neural network is trained to detect kills based on the default UI layout. Custom UI configurations are not supported at this time. Support for custom UIs may be added in future updates.
-
-#### Q: Why is the algorithm so slow on The Finals?
-
-**A:** The algorithm is slow because it relies on OCR to detect the kill feed, which is computationally intensive. To improve processing time, use a lower framerate (e.g., 4 frames per second). Increasing the framerate will significantly increase processing time without substantial improvement in results.
-
-# Contributing
-
-We welcome contributions from the community!
-
-## Setting Up Pre-Commit Hooks
-
-To maintain code quality, we use `pre-commit` hooks. Follow these steps to set them up:
-
-1. **Install Pre-Commit**
-
-   ```sh
-   pip install pre-commit
-   ```
-
-2. **Install Git Hooks**
-
-   ```sh
-   pre-commit install -t pre-commit -t commit-msg
-   ```
-
-   This will set up `pre-commit` to run automatically on every `git commit`.
-
-## Development Setup
-
-To get started with development:
-
-1. **Frontend**
-
-   ```sh
-   cd Greefy-frontend
-   yarn
-   yarn dev
-   ```
-
-2. **Backend**
-
-   ```sh
-   cd Greefy-backend
-   pip install -Ir requirements-dev.txt
-   python -m api
-   ```
-
-## Running Tests
-
-To run the test suite:
-
-```sh
-cd Greefy-api
-pytest
-```
