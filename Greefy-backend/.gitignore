@@ -1,0 +1,11 @@
+dataset/*
+!dataset/dataset-values-template.json
+!dataset/README.md
+
+.data/
+.tests-data/
+.dataset/
+
+merged*
+
+.venv
